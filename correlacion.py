@@ -49,7 +49,7 @@ ax.set_ylabel('Autocorrelación') # ver si se normaliza o cómo son las unidades
 ax.legend()
 plt.show()
 
-#%% tc promedio de 100 pantallas
+#%% tc promedio de 100 pantallas del osciloscopio (sin resistencia)
 
 tc_100 = []
 N = 100
@@ -66,5 +66,4 @@ for n in range(N):
     tc_100.append(tc)
 
 tc_promedio = np.mean(tc_100)
-print(f'el tiempo de coherencia al promediar 100 pantallas es: {tc_promedio} ns') 
-# %%
+print(f'el tiempo de coherencia al promediar 100 pantallas es: {tc_promedio} ns')
