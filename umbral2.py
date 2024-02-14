@@ -32,7 +32,7 @@ errores_apagado = alturas_apagado*0.03
 # plt.hist(alturas_prendido, 50)
 # plt.hist(alturas_apagado, 50)
 
-N = 200
+N = 500
 v = np.linspace(0,max(alturas_apagado),N)
 
 fotones_prendido = np.zeros(N-1)
@@ -52,11 +52,11 @@ print(f'El umbral es: ({umbral} +- {v[1]-v[0]}) mV')
 
 fig, ax = plt.subplots()
 ax.axvline(v[i_max], linestyle='--', color='r', label='Umbral')
-ax.plot(v1, proporcion,'o', color='k', label='Proporción')
+ax.plot(v1, proporcion,'.', color='k', label='Proporción')
 ax.set_xlabel('Umbral [mV]')
 ax.set_ylabel('Proporción')
 ax.legend()
-# plt.savefig('Gráficos/prop umbral.pdf', format='pdf', dpi=150)
+plt.savefig('Gráficos/prop umbral.pdf', format='pdf', dpi=150)
 plt.show()
 # plt.hist(alturas_prendido, N)
 # plt.hist(alturas_apagado, N)
