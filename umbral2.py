@@ -51,10 +51,11 @@ umbral = v[i_max]
 print(f'El umbral es: ({umbral} +- {v[1]-v[0]}) mV')
 
 fig, ax = plt.subplots()
-ax.axvline(v[i_max], linestyle='--', color='r', label='Umbral')
-ax.plot(v1, proporcion,'.', color='k', label='Proporción')
+ax.axvline(-v[i_max], linestyle='--', color='r', label='0.82 mV')
+ax.plot(-v1, proporcion,'.', color='k', label='Proporción')
 ax.set_xlabel('Umbral [mV]')
 ax.set_ylabel('Proporción')
+ax.set_ylim(0)
 ax.legend()
 plt.savefig('Gráficos/prop umbral.pdf', format='pdf', dpi=150)
 plt.show()
