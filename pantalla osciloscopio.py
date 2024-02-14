@@ -26,7 +26,7 @@ mpl.rcParams['axes.labelsize'] = 16
 mpl.rcParams['savefig.bbox'] = 'tight'
 
 # cargo los datos
-data = np.loadtxt('Mediciones/50ms data.csv', delimiter=',')*1e3
+data= np.loadtxt("Mediciones/datos histograma de alturas laser apagado.csv", delimiter=',')*1e3
 tiempo = np.loadtxt('Mediciones/50ms tiempo.csv', delimiter=',')
 
 umbral=0.0008224448897795593*1e3
