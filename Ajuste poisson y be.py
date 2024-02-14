@@ -25,7 +25,7 @@ mpl.rcParams['figure.dpi'] = 100
 # def poisson(x,k):
 #     return np.exp(-k)*(k**x)/sp.special.factorial(x)
 
-fotones = np.loadtxt('laser estable 1microsegundo.txt')
+fotones = np.loadtxt('Mediciones/laser estable 1microsegundo.txt')
 
 fig, ax = plt.subplots()
 
@@ -82,13 +82,14 @@ plt.plot(
 plt.legend()
 plt.show()
 #%%
-fotones_be=np.loadtxt('conteoT5nsmaschicaquetc3.txt')
+fotones_be=np.loadtxt('Mediciones/conteoT5nsmaschicaquetc3.txt')
 bins = np.arange(5) - 0.5
 entries, bin_edges, patches =plt.hist(fotones_be,bins=bins,density=True,label="Medición")
 def bose_einstein(k,m):
     return (m**(k))/((1+m)**(1+k))
 middles_bins = (bin_edges[1:] + bin_edges[:-1]) * 0.5
 parameters, cov_matrix = curve_fit(bose_einstein, middles_bins, entries)
+print(parameters)
 x_plot = np.arange(0, 4)
 
 
