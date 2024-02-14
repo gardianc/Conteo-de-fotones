@@ -51,5 +51,3 @@ ax.set_xlabel('Cantidad de fotones')
 ax.legend()
 # plt.savefig('Gráficos/laser estable 500nanosegundos.pdf', format='pdf', dpi=150)
 plt.show()
-
-# %%
